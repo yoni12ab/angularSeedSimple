@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import {MaterialModule} from './material.module';
+import {HttpClientModule} from '@angular/common/http';
 //TODO-shared: try use only components because services will be imported multiple times
 // if you need service you it from core
 
@@ -19,7 +20,8 @@ import {MaterialModule} from './material.module';
   exports: [
     CommonModule,
     UserProfileComponent,
-    MaterialModule
+    MaterialModule,
+    HttpClientModule
   ]
 })
 export class SharedModule { }
