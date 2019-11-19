@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { UsersModule } from './users/users.module';
-import {UsersResolver} from './core/users.resolver';
-import {PermissionsGuard} from './core/permissions.guard';
+import {UsersResolverService} from './core/users/users-resolver.service';
+import {PermissionsGuardService} from './core/permissions-guard.service';
 import {NotAuthorizedComponent} from './not-authorized/not-authorized.component';
 
 const routes: Routes = [
@@ -10,16 +10,16 @@ const routes: Routes = [
     path: '',
     //TODO-lazy: use loadChildren
     loadChildren: () => import('./home/home.module').then(m => m.HomeModule), // ! ROUTER use import thats downloads the module
-    canActivate: [PermissionsGuard],
-    resolve: {users: UsersResolver}
+    canActivate: [PermissionsGuardService],
+    resolve: {users: UsersResolverService}
   },
   {
     path: 'users',
     loadChildren: () => import('./users/users.module').then(m => m.UsersModule),
     //TODO-Guard  include guard in app routing
-    canActivate: [PermissionsGuard],
+    canActivate: [PermissionsGuardService],
     //TODO-Resolve include resolver in app routing
-    resolve: {users: UsersResolver}
+    resolve: {users: UsersResolverService}
   },
   {
     path:'not-authorized',

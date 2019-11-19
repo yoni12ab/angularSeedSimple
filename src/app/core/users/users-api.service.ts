@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {UsersRes} from '../models/users.model';
+import {UsersRes} from '../../models/users.model';
 import {share, shareReplay} from 'rxjs/operators';
 
 @Injectable({
