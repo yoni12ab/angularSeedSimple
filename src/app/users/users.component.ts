@@ -8,9 +8,8 @@ import {UsersApiService} from '../core/users/users-api.service';
   styleUrls: ['./users.component.scss']
 })
 export class UsersComponent implements OnInit {
-
-  constructor(private usersFacadeService: UsersFacadeService,
-              private usersApiService: UsersApiService) { }
+  public users$ = this.usersFacadeService.getUsers();
+  constructor(private usersFacadeService: UsersFacadeService) { }
 
   ngOnInit() {
   }
