@@ -12,6 +12,7 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [],
+  //TODO-lazy: use forChild
   imports: [RouterModule.forChild(routes)], // ! ROUTER use for child
   exports: [RouterModule]
 })

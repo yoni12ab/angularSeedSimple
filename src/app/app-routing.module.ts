@@ -5,6 +5,7 @@ import { UsersModule } from './users/users.module';
 const routes: Routes = [
   {
     path: '',
+    //TODO-lazy: use loadChildren
     loadChildren: () => import('./home/home.module').then(m => m.HomeModule) // ! ROUTER use import thats downloads the module
   },
   {
@@ -14,6 +15,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
+  //TODO-lazy: use forRoot
   imports: [RouterModule.forRoot(routes)], // ! ROUTER use for root
   exports: [RouterModule]
 })
