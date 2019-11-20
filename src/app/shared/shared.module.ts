@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UserProfileComponent } from './user-profile/user-profile.component';
-import {MaterialModule} from './material.module';
-import {HttpClientModule} from '@angular/common/http';
+import { MaterialModule } from './material.module';
+import { HttpClientModule } from '@angular/common/http';
 //TODO-shared: try use only components because services will be imported multiple times
 // if you need service you it from core
 
@@ -10,13 +10,11 @@ import {HttpClientModule} from '@angular/common/http';
 // const importArr = [UserProfileComponent];
 
 @NgModule({
-  providers:[
+  providers: [
     //TODO-lazy: avoid using services here
   ],
   declarations: [UserProfileComponent],
-  imports: [
-    CommonModule
-  ],
+  imports: [CommonModule, MaterialModule],
   exports: [
     CommonModule,
     UserProfileComponent,
@@ -24,4 +22,4 @@ import {HttpClientModule} from '@angular/common/http';
     HttpClientModule
   ]
 })
-export class SharedModule { }
+export class SharedModule {}

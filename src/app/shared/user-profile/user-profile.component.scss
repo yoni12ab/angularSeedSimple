@@ -1,0 +1,7 @@
+.example-card {
+  ::ng-deep {
+    [mat-card-image] {
+      width: 500px;
+    }
+  }
+}
