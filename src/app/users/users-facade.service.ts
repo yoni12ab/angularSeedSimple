@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {Observable} from 'rxjs';
-import {User, UsersRes} from '../models/users.model';
-import {UsersStateService} from '../core/users/users-state.service';
+import {User, UsersRes} from '../core/users/users.model';
+import {UsersState} from '../core/users/users.state';
 import {map} from 'rxjs/operators';
 
 @Injectable({
@@ -9,7 +9,7 @@ import {map} from 'rxjs/operators';
 })
 export class UsersFacadeService {
 
-  constructor(private usersState: UsersStateService) {
+  constructor(private usersState: UsersState) {
     console.log('users facade loaded');
   }
   public getUsers(): Observable<UsersRes>{

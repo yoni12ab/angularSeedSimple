@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {UsersRes} from '../../models/users.model';
+import {UsersRes} from './users.model';
 import {share, shareReplay} from 'rxjs/operators';
 
 @Injectable({
   //TODO-core: define services in provide in and not in providers array so the compiler can tree sake them
   providedIn: 'root'
 })
-export class UsersApiService {
+export class UsersApi {
   //https://n161.tech/t/dummyapi/documentation/
   private BASE_API = 'https://n161.tech/api/dummyapi';
   private httpReq = this.http.get<UsersRes>(`${this.BASE_API}/user?limit=10&page=1`).pipe(shareReplay());

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
-import { MatTabsModule } from '@angular/material';
+import { MatTabsModule, MatSnackBarModule } from '@angular/material';
 
-const importsExports = [MatTabsModule];
+const importsExports = [MatTabsModule, MatSnackBarModule];
 @NgModule({
   declarations: [],
   imports: [

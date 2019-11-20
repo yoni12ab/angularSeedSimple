@@ -1,6 +1,6 @@
 <nav mat-tab-nav-bar>
   <a mat-tab-link routerLink="/" routerLinkActive="active">home</a>
   <a mat-tab-link routerLink="/users" routerLinkActive="active">Users</a>
-  <a mat-tab-link [routerLink]="['users']" [queryParams]="{q:'yoni'}" routerLinkActive="active">Users (?Yoni)</a>
+  <a mat-tab-link [routerLink]="['admin']" [state]="{yoni:'yoni'}" routerLinkActive="active">Admin</a>
 </nav>
 <router-outlet></router-outlet>

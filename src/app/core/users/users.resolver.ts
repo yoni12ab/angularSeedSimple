@@ -1,19 +1,19 @@
 import {Injectable} from '@angular/core';
 import {Observable, of, timer} from 'rxjs';
 import {ActivatedRouteSnapshot, Resolve, RouterStateSnapshot} from '@angular/router';
-import {UsersApiService} from './users-api.service';
-import {UsersRes} from '../../models/users.model';
+import {UsersApi} from './users.api';
+import {UsersRes} from './users.model';
 import {tap} from 'rxjs/operators';
-import {UsersStateService} from './users-state.service';
+import {UsersState} from './users.state';
 
 
 @Injectable({
   providedIn: 'root'
 })
-export class UsersResolverService implements Resolve<Observable<UsersRes>> {
+export class UsersResolver implements Resolve<Observable<UsersRes>> {
   //TODO-Resolve
-  constructor(private usersApi: UsersApiService,
-              private usersState: UsersStateService) {}
+  constructor(private usersApi: UsersApi,
+              private usersState: UsersState) {}
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<UsersRes> {
     console.log('resolver getUsers');

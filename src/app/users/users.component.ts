@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {UsersFacadeService} from './users-facade.service';
-import {UsersApiService} from '../core/users/users-api.service';
+import {UsersApi} from '../core/users/users.api';
 
 @Component({
   selector: 'app-users',
