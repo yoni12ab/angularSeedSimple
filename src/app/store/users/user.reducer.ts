@@ -2,7 +2,7 @@ import { createReducer, on, Action } from '@ngrx/store';
 import { User } from 'src/app/core/users/users.model';
 import * as UserActions from './user.actions';
 const initialState: User[] = [];
-
+//TODO-Store
 const setUsersFunc = (state: User[], { users }): User[] => {
   return [...users];
 };
