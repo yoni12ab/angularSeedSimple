@@ -12,6 +12,7 @@ import { usersReducer } from './store';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from 'src/environments/environment';
+import {YoniService} from './core/yoni.service';
 @NgModule({
   declarations: [AppComponent, NotAuthorizedComponent, AdminComponent],
   imports: [
@@ -28,6 +29,8 @@ import { environment } from 'src/environments/environment';
     BrowserAnimationsModule
   ],
   providers: [
+    //TODO-multiple-services
+    // YoniService,
     { provide: LocationStrategy, useClass: HashLocationStrategy } //TODO-ROUTER add this for # in url
   ],
   bootstrap: [AppComponent]

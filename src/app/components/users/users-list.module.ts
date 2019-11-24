@@ -5,6 +5,6 @@ import { SharedModule } from '../../shared/shared.module';
 
 @NgModule({
   declarations: [UsersListComponent],
-  imports: [SharedModule, UsersListRoutingModule]
+  imports: [SharedModule, UsersListRoutingModule],
 })
 export class UsersListModule {}
