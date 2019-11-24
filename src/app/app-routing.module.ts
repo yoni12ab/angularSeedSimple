@@ -5,7 +5,7 @@ import { UsersResolver } from './core/users/users.resolver';
 import { PermissionsGuard } from './core/permissions/permissions.guard';
 import { NotAuthorizedComponent } from './components/not-authorized/not-authorized.component';
 import { PermissionsLoader } from './core/permissions/permissions.loader';
-import { AdminComponent } from './admin/admin.component';
+import { AdminComponent } from './components/admin/admin.component';
 
 const routes: Routes = [
   {
