@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {UsersListFacade} from './users/users-list.facade';
+import {UsersListFacade} from './components/users/users-list.facade';
 
 @Component({
   selector: 'app-root',

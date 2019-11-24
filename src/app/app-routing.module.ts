@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { UsersListModule } from './users/users-list.module';
+import { UsersListModule } from './components/users/users-list.module';
 import { UsersResolver } from './core/users/users.resolver';
 import { PermissionsGuard } from './core/permissions/permissions.guard';
-import { NotAuthorizedComponent } from './not-authorized/not-authorized.component';
+import { NotAuthorizedComponent } from './components/not-authorized/not-authorized.component';
 import { PermissionsLoader } from './core/permissions/permissions.loader';
 import { AdminComponent } from './admin/admin.component';
 
@@ -11,14 +11,14 @@ const routes: Routes = [
   {
     path: '',
     //TODO-lazy: use loadChildren
-    loadChildren: () => import('./home/home.module').then(m => m.HomeModule), // ! ROUTER use import thats downloads the module
+    loadChildren: () => import('./components/home/home.module').then(m => m.HomeModule), // ! ROUTER use import thats downloads the module
     canActivate: [PermissionsGuard],
     resolve: { users: UsersResolver }
   },
   {
     path: 'users',
     loadChildren: () =>
-      import('./users/users-list.module').then(m => m.UsersListModule),
+      import('./components/users/users-list.module').then(m => m.UsersListModule),
     resolve: { users: UsersResolver }
   },
   {

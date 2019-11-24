@@ -1,6 +1,6 @@
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {UsersListFacade} from './users-list.facade';
-import {User} from '../core/users/users.model';
+import {User} from '../../core/users/users.model';
 
 @Component({
   selector: 'app-users-list',

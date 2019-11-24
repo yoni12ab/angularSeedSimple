@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
-import { NotAuthorizedComponent } from './not-authorized/not-authorized.component';
+import { NotAuthorizedComponent } from './components/not-authorized/not-authorized.component';
 import { AdminComponent } from './admin/admin.component';
 import { usersReducer } from './store';
 import { StoreModule } from '@ngrx/store';

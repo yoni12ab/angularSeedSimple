@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { User, UsersRes } from '../core/users/users.model';
-import { UsersState } from '../core/users/users.state';
+import { User, UsersRes } from '../../core/users/users.model';
+import { UsersState } from '../../core/users/users.state';
 import { map } from 'rxjs/operators';
-import {UsersFacade} from '../core/users/users.facade';
+import {UsersFacade} from '../../core/users/users.facade';
 
 @Injectable({
   providedIn: 'root'
