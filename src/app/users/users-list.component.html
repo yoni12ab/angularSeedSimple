@@ -1,5 +1,6 @@
 <h1>Users List</h1>
 <div *ngIf="users$ | async as users">
-  <app-user-profile *ngFor="let user of users" [user]="user">
+  <app-user-profile *ngFor="let user of users" [user]="user"
+  (deleteUser)="deleteUserFunc($event)">
   </app-user-profile>
 </div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {UsersListFacade} from './users/users-list.facade';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angularSeed';
+  public users$ = this.usersFacadeService.getUsers();
+  constructor(private usersFacadeService: UsersListFacade) {}
 }

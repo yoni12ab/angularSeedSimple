@@ -24,4 +24,8 @@ export class UsersState {
     this.store.dispatch(action({ users }));
     // this.users$.next(users);
   }
+
+  public deleteUser(user: User): void {
+    this.store.dispatch(UserActions.deleteUser({ user }));
+  }
 }

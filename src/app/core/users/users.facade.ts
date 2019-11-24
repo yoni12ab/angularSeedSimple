@@ -8,7 +8,8 @@ import { setUsers } from '../../store/users/user.actions';
 
 @Injectable({ providedIn: 'root' })
 export class UsersFacade {
-  constructor(private usersApi: UsersApi, private usersState: UsersState) {}
+  constructor(private usersApi: UsersApi,
+              private usersState: UsersState) {}
 
   public fetchUsers(): Observable<User[]> {
     return this.usersApi.fetchUsers().pipe(map(res => res.data));
@@ -20,5 +21,9 @@ export class UsersFacade {
 
   public setUsers(users: User[], storeAction?): void {
     this.usersState.setUsers(users, storeAction);
+  }
+
+  public deleteUser(user: User): void {
+    this.usersState.deleteUser(user);
   }
 }

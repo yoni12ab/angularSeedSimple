@@ -1,7 +1,9 @@
-.example-card {
+.user-profile-container {
+  margin-bottom: 30px;
   ::ng-deep {
     [mat-card-image] {
       width: 500px;
+      height: 200px;
     }
   }
 }

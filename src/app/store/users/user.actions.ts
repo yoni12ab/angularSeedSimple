@@ -10,3 +10,8 @@ export const setUsersAfterFetch = createAction(
   '[users] set users after fetch',
   props<{ users: User[] }>()
 );
+
+export const deleteUser = createAction(
+  '[users] delete user',
+  props<{ user: User }>()
+);
