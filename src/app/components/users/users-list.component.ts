@@ -24,7 +24,7 @@ export class UsersListComponent implements OnInit, OnDestroy {
   ngOnInit() {
     //TODO-unsubscribe
     this.users$
-   //   .pipe(takeUntil(this.destroy$))
+      .pipe(takeUntil(this.destroy$))
       .subscribe(this.subFunc.bind(this))
   }
 
