@@ -30,7 +30,7 @@ import {YoniService} from './core/yoni.service';
   ],
   providers: [
     //TODO-multiple-services
-    // YoniService,
+   //  YoniService,
     { provide: LocationStrategy, useClass: HashLocationStrategy } //TODO-ROUTER add this for # in url
   ],
   bootstrap: [AppComponent]

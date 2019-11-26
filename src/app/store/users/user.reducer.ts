@@ -4,7 +4,8 @@ import * as UserActions from './user.actions';
 const initialState: User[] = [];
 //TODO-Store
 const setUsersFunc = (state: User[], { users }): User[] => {
-  return [...users];
+  // return [...users];
+  return users;
 };
 
 const deleteUsersFunc = (state: User[], { user }): User[] => {
