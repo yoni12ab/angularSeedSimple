@@ -1,8 +1,18 @@
 <nav mat-tab-nav-bar>
   <a mat-tab-link routerLink="/" routerLinkActive="active">home</a>
-  <a mat-tab-link routerLink="/users" routerLinkActive="active">Users({{(users$ | async)?.length}})</a>
-  <a mat-tab-link [routerLink]="['admin']" [state]="{yoni: yoni.checked}" routerLinkActive="active">Admin</a>
-  <a class="app-is-yoni-toggle"> <mat-slide-toggle #yoni>Is Yoni</mat-slide-toggle></a>
-
+  <a mat-tab-link routerLink="/page1" routerLinkActive="active">page1</a>
+  <a mat-tab-link routerLink="/users" routerLinkActive="active"
+    >Users({{ (users$ | async)?.length }})</a
+  >
+  <a
+    mat-tab-link
+    [routerLink]="['admin']"
+    [state]="{ yoni: yoni.checked }"
+    routerLinkActive="active"
+    >Admin</a
+  >
+  <a class="app-is-yoni-toggle">
+    <mat-slide-toggle #yoni>Is Yoni</mat-slide-toggle></a
+  >
 </nav>
 <router-outlet></router-outlet>

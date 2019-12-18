@@ -1,18 +1,18 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { HashLocationStrategy, LocationStrategy } from '@angular/common';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SharedModule } from './shared/shared.module';
-import { NotAuthorizedComponent } from './components/not-authorized/not-authorized.component';
-import { AdminComponent } from './components/admin/admin.component';
-import { usersReducer } from './store';
-import { StoreModule } from '@ngrx/store';
-import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { environment } from 'src/environments/environment';
-import {YoniService} from './core/yoni.service';
+import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from "./app.component";
+import { HashLocationStrategy, LocationStrategy } from "@angular/common";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { SharedModule } from "./shared/shared.module";
+import { NotAuthorizedComponent } from "./components/not-authorized/not-authorized.component";
+import { AdminComponent } from "./components/admin/admin.component";
+import { usersReducer } from "./store";
+import { StoreModule } from "@ngrx/store";
+import { StoreDevtoolsModule } from "@ngrx/store-devtools";
+import { environment } from "src/environments/environment";
+import { YoniService } from "./core/yoni.service";
 @NgModule({
   declarations: [AppComponent, NotAuthorizedComponent, AdminComponent],
   imports: [
@@ -30,7 +30,7 @@ import {YoniService} from './core/yoni.service';
   ],
   providers: [
     //TODO-multiple-services
-   //  YoniService,
+    //YoniService,
     { provide: LocationStrategy, useClass: HashLocationStrategy } //TODO-ROUTER add this for # in url
   ],
   bootstrap: [AppComponent]
