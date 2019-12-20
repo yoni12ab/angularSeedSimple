@@ -1,6 +1,8 @@
 <nav mat-tab-nav-bar>
   <a mat-tab-link routerLink="/" routerLinkActive="active">home</a>
   <a mat-tab-link routerLink="/page1" routerLinkActive="active">page1</a>
+  <a mat-tab-link routerLink="/page2" routerLinkActive="active">page2</a>
+  <a mat-tab-link routerLink="/page3" routerLinkActive="active">page3</a>
   <a mat-tab-link routerLink="/users" routerLinkActive="active"
     >Users({{ (users$ | async)?.length }})</a
   >

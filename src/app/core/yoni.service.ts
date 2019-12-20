@@ -1,11 +1,13 @@
-import { Injectable } from "@angular/core";
+import { Injectable } from '@angular/core';
 //TODO-multiple-services
-@Injectable({
-  providedIn: "root"
-})
+@Injectable()
 export class YoniService {
-  num = 1;
+  id = Math.random() * 10000;
   constructor() {
-    console.log(`Yoni loaded ${Math.random() * 10000}`);
+    console.log(`Yoni loaded ${this.id}`);
+  }
+
+  public log(): void {
+    //console.log(`Yoni id = ${this.id}`);
   }
 }

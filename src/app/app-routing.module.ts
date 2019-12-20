@@ -1,41 +1,50 @@
-import { NgModule } from "@angular/core";
-import { Routes, RouterModule } from "@angular/router";
-import { UsersListModule } from "./components/users/users-list.module";
-import { UsersResolver } from "./core/users/users.resolver";
-import { PermissionsGuard } from "./core/permissions/permissions.guard";
-import { NotAuthorizedComponent } from "./components/not-authorized/not-authorized.component";
-import { PermissionsLoader } from "./core/permissions/permissions.loader";
-import { AdminComponent } from "./components/admin/admin.component";
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import { UsersListModule } from './components/users/users-list.module';
+import { UsersResolver } from './core/users/users.resolver';
+import { PermissionsGuard } from './core/permissions/permissions.guard';
+import { NotAuthorizedComponent } from './components/not-authorized/not-authorized.component';
+import { PermissionsLoader } from './core/permissions/permissions.loader';
+import { AdminComponent } from './components/admin/admin.component';
 
 const routes: Routes = [
   {
-    path: "",
+    path: '',
     //TODO-lazy: use loadChildren
     loadChildren: () =>
-      import("./components/home/home.module").then(m => m.HomeModule), // ! ROUTER use import thats downloads the module
+      import('./components/home/home.module').then(m => m.HomeModule), // ! ROUTER use import thats downloads the module
     canActivate: [PermissionsGuard],
     resolve: { users: UsersResolver }
   },
   {
-    path: "users",
+    path: 'users',
     loadChildren: () =>
-      import("./components/users/users-list.module").then(
+      import('./components/users/users-list.module').then(
         m => m.UsersListModule
       ),
     resolve: { users: UsersResolver }
   },
   {
-    path: "page1",
+    path: 'page1',
     loadChildren: () =>
-      import("./components/page1/page1.module").then(m => m.Page1Module),
-    resolve: { users: UsersResolver }
+      import('./components/page1/page1.module').then(m => m.Page1Module)
   },
   {
-    path: "not-authorized",
+    path: 'page2',
+    loadChildren: () =>
+      import('./components/page2/page2.module').then(m => m.Page2Module)
+  },
+  {
+    path: 'page3',
+    loadChildren: () =>
+      import('./components/page3/page3.module').then(m => m.Page3Module)
+  },
+  {
+    path: 'not-authorized',
     component: NotAuthorizedComponent
   },
   {
-    path: "admin",
+    path: 'admin',
     component: AdminComponent,
     //TODO-Loader use this for lazy loading include guard in app routing
     // canLoad: [PermissionsLoader],
